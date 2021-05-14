@@ -1,0 +1,25 @@
+We have two bugs in this game: 
+1) Whenever the space key is pressed, there are multiple trajectories of the bird on the screen.
+ 2) The bird swings rapidly when it is reset. This is not desired. 
+
+How is the position of the Bird stored? 
+All the positions in the bird are stored in the array property called a trajectory. In order to avoid multiple trajectories, we need to clear the array. 
+ 
+How will you empty the array whenever the space key is pressed? 
+ 
+There are many ways to empty an array but a fast approach is by assigning no value inside empty brackets. arr=[]; 
+
+So the old trajectory seems to get removed when the bird resets.
+
+The second bug you need to resolve is to stop the bird swinging widely while still being attached to the slingshot. 
+ 
+ Let's assume that each time when the bird destroys the pig, the score will increase by 50.  
+ The score should keep increasing for each frame after the pig is hit till a certain score. 
+ 
+ Let's go through the condition again. 
+ 
+The score keeps increasing as the condition is always true as the pig is removed from the world. 
+ We can add one more ‘if condition’ and change this ‘remove’ value as ‘false’ as soon as the score is updated. 
+ 
+ https://github.com/isha939/c33
+ 
